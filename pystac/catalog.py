@@ -134,14 +134,15 @@ class Catalog(STACObject):
     title: Optional[str]
     """Optional short descriptive one-line title for the catalog."""
 
-    stac_extensions: Optional[List]
+    stac_extensions: List[str]
     """Optional list of extensions the Catalog implements."""
 
     extra_fields: Dict[str, Any]
     """Extra fields that are part of the top-level JSON properties of the Catalog."""
 
     links: List[Link]
-    """A list of :class:`~pystac.Link` objects representing all links associated with this Catalog."""
+    """A list of :class:`~pystac.Link` objects representing all links associated with
+    this Catalog."""
 
     catalog_type: CatalogType
     """The catalog type. Defaults to ``"ABSOLUTE_PUBLISHED"``"""

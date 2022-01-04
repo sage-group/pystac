@@ -445,11 +445,12 @@ class Collection(Catalog):
     id: str
     """Identifier for the collection."""
 
-    description: str 
+    description: str
     """Detailed multi-line description to fully explain the collection."""
 
     extent: Extent
-    """Spatial and temporal extents that describe the bounds of all items contained within this Collection."""
+    """Spatial and temporal extents that describe the bounds of all items contained
+    within this Collection."""
 
     title: Optional[str]
     """Optional short descriptive one-line title for the collection."""
@@ -467,14 +468,15 @@ class Collection(Catalog):
     """Map of Assets"""
 
     summaries: Summaries
-    """A map of property summaries, either a set of values or statistics such as a range."""
+    """A map of property summaries, either a set of values or statistics such as a
+    range."""
 
     links: List[Link]
-    """A list of :class:`~pystac.Link` objects representing all links associated with this Collection."""
+    """A list of :class:`~pystac.Link` objects representing all links associated with
+    this Collection."""
 
     extra_fields: Dict[str, Any]
     """Extra fields that are part of the top-level JSON properties of the Catalog."""
-
 
     STAC_OBJECT_TYPE = STACObjectType.COLLECTION
 
